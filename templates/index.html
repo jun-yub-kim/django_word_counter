@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Word Counter
+    </h1>
+
+    <hr/>
+
+    <form action="{% url 'result' %}" method="POST">
+        {% csrf_token %}
+        <textarea rows="50" cols="80" name="sentence"></textarea><br>
+        <input type="submit"></input>
+
+    </form>
+
+
+</body>
+
+</html>
